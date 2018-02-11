@@ -1,0 +1,150 @@
+create database hospitaldbms;
+
+use hospitaldbms;
+
+create table adminlogin(username varchar(20), password varchar(20));
+
+insert into adminlogin values('admin', 'admin');
+
+create table reception(username varchar(20), password varchar(20));
+
+insert into reception values('reception', 'reception');
+
+create table appointments(appointment_id int(5) primary key NOT NULL AUTO_INCREMENT, first_name varchar(50), last_name varchar(50), address varchar(150), city varchar(50), state varchar(50), pin varchar(6), primary_phone varchar(13), email varchar(60), gender varchar(6), dob date, medical_concerns varchar(150), insurance varchar(3), insurance_number int(5), patient_type varchar(10), date_of_admission date);
+
+create table departments(department_id int(2) primary key NOT NULL AUTO_INCREMENT, department_name varchar(75), number_of_employees int(3));
+
+create table quickappointments(app_id int(5) primary key NOT NULL AUTO_INCREMENT, first_name varchar(50), last_name varchar(50), app_date date, doctor_id int(5), mobile_number varchar(10));
+
+create table rooms(room_id int(3) primary key NOT NULL, room_type varchar(12), number_of_beds int(2), number_of_patients int(2), charges_per_night float(7,2));
+
+insert into rooms values(1, 'Public', 5, 0, 500);
+insert into rooms values(2, 'Public', 5, 0, 500);
+insert into rooms values(3, 'Public', 5, 0, 500);
+insert into rooms values(4, 'Public', 5, 0, 500);
+insert into rooms values(5, 'Public', 5, 0, 500);
+insert into rooms values(6, 'Public', 5, 0, 500);
+insert into rooms values(7, 'Public', 5, 0, 500);
+insert into rooms values(8, 'Public', 5, 0, 500);
+insert into rooms values(9, 'Public', 5, 0, 500);
+insert into rooms values(10, 'Public', 5, 0, 500);
+insert into rooms values(11, 'Public', 5, 0, 500);
+insert into rooms values(12, 'Public', 5, 0, 500);
+insert into rooms values(13, 'Public', 5, 0, 500);
+insert into rooms values(14, 'Public', 5, 0, 500);
+insert into rooms values(15, 'Public', 5, 0, 500);
+insert into rooms values(16, 'Public', 5, 0, 500);
+insert into rooms values(17, 'Public', 5, 0, 500);
+insert into rooms values(18, 'Public', 5, 0, 500);
+insert into rooms values(19, 'Public', 5, 0, 500);
+insert into rooms values(20, 'Public', 5, 0, 500);
+insert into rooms values(21, 'Public', 5, 0, 500);
+insert into rooms values(22, 'Public', 5, 0, 500);
+insert into rooms values(23, 'Public', 5, 0, 500);
+insert into rooms values(24, 'Public', 5, 0, 500);
+insert into rooms values(25, 'Public', 5, 0, 500);
+insert into rooms values(26, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(27, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(28, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(29, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(30, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(31, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(32, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(33, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(34, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(35, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(36, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(37, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(38, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(39, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(40, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(41, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(42, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(43, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(44, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(45, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(46, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(47, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(48, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(49, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(50, 'Semi-Private', 3, 0, 1000);
+insert into rooms values(51, 'Private', 1, 0, 1500);
+insert into rooms values(52, 'Private', 1, 0, 1500);
+insert into rooms values(53, 'Private', 1, 0, 1500);
+insert into rooms values(54, 'Private', 1, 0, 1500);
+insert into rooms values(55, 'Private', 1, 0, 1500);
+insert into rooms values(56, 'Private', 1, 0, 1500);
+insert into rooms values(57, 'Private', 1, 0, 1500);
+insert into rooms values(58, 'Private', 1, 0, 1500);
+insert into rooms values(59, 'Private', 1, 0, 1500);
+insert into rooms values(60, 'Private', 1, 0, 1500);
+insert into rooms values(61, 'Private', 1, 0, 1500);
+insert into rooms values(62, 'Private', 1, 0, 1500);
+insert into rooms values(63, 'Private', 1, 0, 1500);
+insert into rooms values(64, 'Private', 1, 0, 1500);
+insert into rooms values(65, 'Private', 1, 0, 1500);
+insert into rooms values(66, 'Private', 1, 0, 1500);
+insert into rooms values(67, 'Private', 1, 0, 1500);
+insert into rooms values(68, 'Private', 1, 0, 1500);
+insert into rooms values(69, 'Private', 1, 0, 1500);
+insert into rooms values(70, 'Private', 1, 0, 1500);
+insert into rooms values(71, 'Private', 1, 0, 1500);
+insert into rooms values(72, 'Private', 1, 0, 1500);
+insert into rooms values(73, 'Private', 1, 0, 1500);
+insert into rooms values(74, 'Private', 1, 0, 1500);
+insert into rooms values(75, 'Private', 1, 0, 1500);
+insert into rooms values(76, 'Private', 1, 0, 1500);
+insert into rooms values(77, 'Private', 1, 0, 1500);
+insert into rooms values(78, 'Private', 1, 0, 1500);
+insert into rooms values(79, 'Private', 1, 0, 1500);
+insert into rooms values(80, 'Private', 1, 0, 1500);
+insert into rooms values(81, 'Private', 1, 0, 1500);
+insert into rooms values(82, 'Private', 1, 0, 1500);
+insert into rooms values(83, 'Private', 1, 0, 1500);
+insert into rooms values(84, 'Private', 1, 0, 1500);
+insert into rooms values(85, 'Private', 1, 0, 1500);
+insert into rooms values(86, 'Private', 1, 0, 1500);
+insert into rooms values(87, 'Private', 1, 0, 1500);
+insert into rooms values(88, 'Private', 1, 0, 1500);
+insert into rooms values(89, 'Private', 1, 0, 1500);
+insert into rooms values(90, 'Private', 1, 0, 1500);
+insert into rooms values(91, 'Private', 1, 0, 1500);
+insert into rooms values(92, 'Private', 1, 0, 1500);
+insert into rooms values(93, 'Private', 1, 0, 1500);
+insert into rooms values(94, 'Private', 1, 0, 1500);
+insert into rooms values(95, 'Private', 1, 0, 1500);
+insert into rooms values(96, 'Private', 1, 0, 1500);
+insert into rooms values(97, 'Private', 1, 0, 1500);
+insert into rooms values(98, 'Private', 1, 0, 1500);
+insert into rooms values(99, 'Private', 1, 0, 1500);
+insert into rooms values(100, 'Private', 1, 0, 1500);
+
+insert into departments values(1, 'Accident and Emergency (A&E)', 0);
+insert into departments values(2, 'Anaesthetics', 0);
+insert into departments values(3, 'Cardiology', 0);
+insert into departments values(4, 'Critical Care', 0);
+insert into departments values(5, 'Radiology', 0);
+insert into departments values(6, 'Gynaecology', 0);
+insert into departments values(7, 'Human Resources', 0);
+insert into departments values(8, 'Neurology', 0);
+insert into departments values(9, 'Oncology', 0);
+insert into departments values(10, 'Opthamology', 0);
+insert into departments values(11, 'Orthopaedics', 0);
+insert into departments values(12, 'Pharmacy', 0);
+insert into departments values(13, 'General', 0);
+insert into departments values(14, 'Urology', 0);
+insert into departments values(15, 'Pathology', 0);
+insert into departments values(16, 'Psychology', 0);
+insert into departments values(17, 'Other Staff', 0);
+
+create table employee(employee_id int(5) primary key NOT NULL AUTO_INCREMENT, department_id int(2), first_name varchar(50), last_name varchar(50), dob date, email varchar(60), gender varchar(6), contact_number varchar(13), qualifications varchar(100), number_of_patients int(3) DEFAULT 0, foreign key(department_id) references departments(department_id) on delete set NULL);
+
+create table employeelogin(username varchar(20) primary key NOT NULL, password varchar(20), employee_id int(5), foreign key(employee_id) references employee(employee_id) on delete set NULL);
+
+create table patients(patient_id int(5) primary key NOT NULL AUTO_INCREMENT, appointment_id int(5), drugs_prescribed varchar(150), doctor_assigned int(5), room_id int(3), foreign key(appointment_id) references appointments(appointment_id) on delete set NULL, foreign key(doctor_assigned) references employee(employee_id) on delete set NULL, foreign key(room_id) references rooms(room_id) on delete set NULL);
+
+create table lastbilldate(patient_id int(5), lastbill date, foreign key(patient_id) references patients(patient_id) on delete set NULL);
+
+create table patientlogin(username varchar(20) primary key NOT NULL, password varchar(20), patient_id int(5), foreign key(patient_id) references patients(patient_id) on delete set NULL);
+
+create table bills(bill_id int(5) primary key NOT NULL AUTO_INCREMENT, patient_id int(5), number_of_days_admitted int(4), room_charges float(9,2), consultational_charges float(9,2), surgery_charges float(9,2), miscellaneous_charges float(9,2), insurance_amount float(9,2), total_amount float(9,2), foreign key(patient_id) references patients(patient_id) on delete set NULL);
